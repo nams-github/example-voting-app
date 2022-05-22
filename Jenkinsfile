@@ -22,8 +22,8 @@ pipeline {
       }
         stage('Build Docker Image') {
             steps {
-                sh "cd vote && sudo docker build . -t 635145294553.dkr.ecr.us-east-1.amazonaws.com/vote:\${BUILD_NUMBER}"
-                sh "sudo docker push 635145294553.dkr.ecr.us-east-1.amazonaws.com/vote:\${BUILD_NUMBER}"
+                sh "cd vote && sudo docker build . -t 998752374893.dkr.ecr.us-east-1.amazonaws.com/proj2-ecr-repo:\${BUILD_NUMBER}"
+                sh "sudo docker push 998752374893.dkr.ecr.us-east-1.amazonaws.com/proj2-ecr-repo:\${BUILD_NUMBER}"
             }
         }
         stage('Deploy in ECS') {
